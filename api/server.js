@@ -10,13 +10,7 @@ mongoose.set('debug', true);
 // remplacer toute cette chaine par l'URI de connexion à votre propre base dans le cloud s
 const uri = 'mongodb+srv://elliot:elliot@cluster0.s8bezwe.mongodb.net/?appName=Cluster0';
 
-const options = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false
-};
-
-mongoose.connect(uri, options)
+mongoose.connect(uri)
   .then(() => {
     console.log("Connecté à la base MongoDB assignments dans le cloud !");
     console.log("at URI = " + uri);
